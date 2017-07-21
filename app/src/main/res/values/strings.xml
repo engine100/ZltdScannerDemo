@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">ZltdScannerDemo</string>
+
+    <string name="app_name">智联天地扫描演示</string>
+    <string name="scan_times">第%1$d次:%2$s</string>
+    <string name="scan_model_single">单扫模式</string>
+    <string name="scan_model_continue">连扫模式</string>
+    <string name="stop_scan">停止扫描</string>
+    <string name="start_scan">点击扫描</string>
+    <string name="company_name">©2011-2017 江苏智联天地科技有限公司. All rights reserved.</string>
+
 </resources>

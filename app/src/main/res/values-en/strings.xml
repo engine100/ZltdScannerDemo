@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ZltdScannerDemo</string>
+    <string name="scan_times">%1$d Times:%2$s</string>
+    <string name="scan_model_single">Single</string>
+    <string name="scan_model_continue">Continue</string>
+    <string name="stop_scan">STOP</string>
+    <string name="start_scan">START</string>
+    <string name="company_name">©2011-2017 Perceive World Technology Co.,Ltd. All rights reserved.</string>
+</resources>

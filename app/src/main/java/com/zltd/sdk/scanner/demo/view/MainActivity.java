@@ -95,10 +95,10 @@ public class MainActivity extends BaseScanActivity {
     @Override
     public void onScannerSuccess(String code) {
         String showData = ++mScanSuccessTimes + ":\n" + code;
-        mLastShow.setText("第" + mScanSuccessTimes + "次：" + code);
+        mLastShow.setText(String.format(getString(R.string.scan_times), mScanSuccessTimes, code));
         mScanDataList.add(0, showData);
         mAdapter.notifyDataSetChanged();
-       // decodeBitmap();
+        // decodeBitmap();
 
     }
 

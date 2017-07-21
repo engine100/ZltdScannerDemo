@@ -1,13 +1,13 @@
+group = "zltd-sdk-scanner"
+def projectName = 'zltd-sdk-scanner-app'
 version = "1.0.0"
 
-def projectName = 'zltd-sdk-scanner-app'
-def siteUrl = 'https://github.com/engine100/DataLoaderDemo'
-def gitUrl = 'https://github.com/engine100/DataLoaderDemo.git'
+def siteUrl = 'https://github.com/zltd/ZltdScannerDemo'
+def gitUrl = 'https://github.com/zltd/ZltdScannerDemo.git'
 
 def pomDeveloperId = "zltd"
 def pomDeveloperName = "zltd"
 def pomDeveloperEmail = "zhiliantiandi@gmail.com"
-group = "zltd-sdk-scanner"
 
 def pomProName = "app activity for zltd scanner"
 

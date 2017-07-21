@@ -58,6 +58,12 @@ public class ControllerFactory {
             return mController;
         }
 
+        //N6一维
+        if ("n6".equals(model) && "alps".equals(brand) && "n6".equals(product)) {
+            mController = new ZLTDScannerManagerController(mContext);
+            return mController;
+        }
+
         // 广播
         //N2机器，不是N2S，也不是N2S000
         if ("simphone n2".equals(model) && "qcom".equals(brand) && "tf_w500".equals(product)) {
@@ -65,7 +71,7 @@ public class ControllerFactory {
             return mController;
         }
 
-        //未知型号的情况下
+        //未知型号的情况下,先适配ScannerManager，再适配DecoderManager
         //强制尝试获取,判断不为null的前提是jar包里返回null，因为这些类已经在机器里了，如果有就不为null
         if (existClass("com.zltd.industry.ScannerManager")) {
             ScannerManager scannerManager = ScannerManager.getInstance();
