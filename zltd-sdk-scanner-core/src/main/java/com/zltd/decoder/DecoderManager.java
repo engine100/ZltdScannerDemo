@@ -123,6 +123,8 @@ public class DecoderManager {
     public interface IDecoderStatusListener {
         void onDecoderStatusChanage(int status);
 
+        //some machines callback it,
+        //but some machines callback below, usually, we can do same operation in this two method
         void onDecoderResultChanage(String result, String time);
 
         void onDecoderResultChanage(String result, Bundle paramBundle);
