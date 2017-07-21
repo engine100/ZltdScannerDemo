@@ -1,0 +1,1 @@
+include ':app', ':zltd-sdk-scanner-compat', ':zltd-sdk-scanner-app', ':zltd-sdk-scanner-util', ':zltd-sdk-scanner-core'
