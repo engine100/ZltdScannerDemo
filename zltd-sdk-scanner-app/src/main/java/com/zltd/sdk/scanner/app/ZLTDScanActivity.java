@@ -1,6 +1,5 @@
 package com.zltd.sdk.scanner.app;
 
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -16,7 +15,7 @@ import com.zltd.sdk.scanner.util.ScanAdapterUtils;
  *
  * @author Engine100
  */
-public class ZLTDScanActivity extends Activity {
+public abstract class ZLTDScanActivity extends Activity {
     protected ScanAdapter mScanAdapter = ScanAdapter.getInstance();
 
     //不用activity直接实现接口，
@@ -69,17 +68,20 @@ public class ZLTDScanActivity extends Activity {
         return true;
     }
 
-    protected void onScannerSuccess(String code) {
+    /**
+     * 扫描成功后调用这个方法
+     */
+    protected abstract void onScannerSuccess(String code);
 
-    }
-
+    /**
+     * 扫描异常后调用这个方法，比如超时或者转换失败
+     */
     protected void onScannerError(String msg) {
 
     }
 
     protected void onStartScan() {
         ScanAdapterUtils.startScan();
-
     }
 
     protected void onStopScan() {

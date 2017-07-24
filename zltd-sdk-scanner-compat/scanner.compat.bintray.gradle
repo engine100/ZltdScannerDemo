@@ -1,4 +1,4 @@
-group = "zltd-sdk-scanner"
+group = "zltd.sdk.scanner"
 def projectName = 'zltd-sdk-scanner-compat'
 version = "1.0.0"
 
@@ -10,6 +10,8 @@ def pomDeveloperName = "zltd"
 def pomDeveloperEmail = "zhiliantiandi@gmail.com"
 
 def pomProName = "for zltd scanner"
+
+def bintrayRepo = "scanner"
 
 task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
@@ -72,7 +74,7 @@ bintray {
     key = isHasFile ? properties.getProperty("bintray.apikey") : System.getenv("bintray.apikey")
     configurations = ['archives']
     pkg {
-        repo = "maven"
+        repo = bintrayRepo
         name = projectName  // #CONFIG# project name in jcenter
         websiteUrl = siteUrl
         vcsUrl = gitUrl

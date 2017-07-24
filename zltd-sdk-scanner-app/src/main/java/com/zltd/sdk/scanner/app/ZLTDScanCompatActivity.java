@@ -15,7 +15,7 @@ import com.zltd.sdk.scanner.util.ScanAdapterUtils;
  *
  * @author Engine100
  */
-public class ZLTDScanCompatActivity extends AppCompatActivity {
+public abstract class ZLTDScanCompatActivity extends AppCompatActivity {
     protected ScanAdapter mScanAdapter = ScanAdapter.getInstance();
 
     // 不用activity直接实现接口，
@@ -68,13 +68,11 @@ public class ZLTDScanCompatActivity extends AppCompatActivity {
         return true;
     }
 
-    protected void onScannerSuccess(String code) {
+    //扫描成功后调用这个方法
+    protected abstract void onScannerSuccess(String code);
 
-    }
-
-    protected void onScannerError(String msg) {
-
-    }
+    //扫描异常后调用这个方法，比如超时或者转换失败
+    protected abstract void onScannerError(String msg);
 
     protected void onStartScan() {
         ScanAdapterUtils.startScan();
