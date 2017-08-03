@@ -26,18 +26,18 @@ public class ZLTDScannerManagerController extends BaseScanController implements 
     private ScannerManager.IScannerStatusListener mIScannerStatusListener = new ScannerManager.IScannerStatusListener() {
 
         @Override
-        public void onScannerStatusChanage(int arg0) {
+        public void onScannerStatusChanage(int status) {
         }
 
         /**
          * 一旦扫描到结果就会调用
          */
         @Override
-        public void onScannerResultChanage(final byte[] arg0) {
-            String result = null;
+        public void onScannerResultChanage(final byte[] result) {
+            String resultCode = null;
             try {
-                result = new String(arg0, "UTF-8");
-                scanSuccess(result);
+                resultCode = new String(result, "UTF-8");
+                scanSuccess(resultCode);
             } catch (Exception e) {
                 e.printStackTrace();
                 scanError(ScannerManager.DECODER_TIMEOUT);
@@ -81,6 +81,7 @@ public class ZLTDScannerManagerController extends BaseScanController implements 
 
         if (mScannerManager != null) {
             mScannerManager.removeScannerStatusListener(mIScannerStatusListener);
+            mScannerManager.stopContinuousScan();
             mScannerManager.scannerEnable(false);
             invokeMethod(mScannerManager, "stopDecode");
             //N2S000 机器里没有这个方法，N5机器需要这个方法关闭

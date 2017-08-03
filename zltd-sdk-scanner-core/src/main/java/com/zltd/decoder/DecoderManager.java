@@ -6,7 +6,6 @@
  */
 package com.zltd.decoder;
 
-import android.os.Bundle;
 import android.view.KeyEvent;
 
 public class DecoderManager {
@@ -127,6 +126,6 @@ public class DecoderManager {
         //but some machines callback below, usually, we can do same operation in this two method
         void onDecoderResultChanage(String result, String time);
 
-        void onDecoderResultChanage(String result, Bundle paramBundle);
+        //void onDecoderResultChanage(String result, Bundle paramBundle);
     }
 }

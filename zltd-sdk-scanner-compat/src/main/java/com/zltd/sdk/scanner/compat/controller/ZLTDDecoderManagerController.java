@@ -40,7 +40,7 @@ public class ZLTDDecoderManagerController extends BaseScanController implements 
         }
 
         public void onDecoderResultChanage(String result, Bundle paramBundle) {
-            onResult(result);
+            //onResult(result);
         }
 
         private void onResult(String result) {
